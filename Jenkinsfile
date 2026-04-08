@@ -26,4 +26,18 @@ pipeline {
             }
         }
     }
+    
+    post {
+        success {
+            mail to: 'your-email@gmail.com',
+                 subject: 'Jenkins Build SUCCESS',
+                 body: 'Build completed successfully!'
+        }
+        failure {
+            mail to: 'your-email@gmail.com',
+                 subject: 'Jenkins Build FAILED',
+                 body: 'Build failed. Check Jenkins logs.'
+        }
+    }
 }
+
