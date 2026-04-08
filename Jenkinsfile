@@ -21,6 +21,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "Deploying to staging..."
+		echo "auto-deploy working"
                 sh 'nohup python3 app.py &'
             }
         }
