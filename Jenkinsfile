@@ -5,7 +5,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo "Installing dependencies..."
+                echo "Installing dependencies........."
                 sh 'python3 -m venv venv'
                 sh '. venv/bin/activate && pip install -r requirements.txt'
             }
@@ -13,7 +13,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo "Running tests..."
+                echo "Running tests...1"
                 sh '. venv/bin/activate && pytest'
             }
         }
